@@ -22,6 +22,8 @@ async function fetchBlogData(slug : string) {
 
     
 }
+
+
 // Destructure the values on the url
 
 export default async  function BlogArticle({params}: {params: {slug:string}}){
@@ -48,8 +50,8 @@ export default async  function BlogArticle({params}: {params: {slug:string}}){
             <div className="mt-16 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary">
                 {/* Sanitize the content from sanity using portabletreact */}
             
-      
-                <PortableText value={data.content}/>
+                { /* @ts-expect-error*/ }
+                <PortableText value ={data.content}/>
             </div>
           
                
