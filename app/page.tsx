@@ -7,6 +7,8 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 // Fetch data 
+// Revalidate our fetch to dynmically update blogs on each blog posted
+export const revalidate = 30;
 async function  getData(){
 
   // Get the data from Sanity, to query data sanity uses Grock as its query Language

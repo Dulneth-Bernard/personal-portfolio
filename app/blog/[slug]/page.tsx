@@ -6,6 +6,10 @@ import { log } from "console";
 import { PortableText } from "@portabletext/react"
 
 import Image from "next/image";
+
+// Revalidate our fetch to dynmically update blogs on each blog posted
+export const revalidate = 30;
+
 async function fetchBlogData(slug : string) {
 
     const query = `
